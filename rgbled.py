@@ -1,0 +1,36 @@
+import rgb
+from time import sleep
+import pulseio
+import board
+
+r = pulseio.PWMOut(board.A2)
+g = pulseio.PWMOut(board.A3)
+b = pulseio.PWMOut(board.A4)
+regrbl = rgb.RGB(r,g,b)
+
+print("red")
+regrbl.red()
+sleep(2)
+print("yellow")
+regrbl.yellow()
+sleep(2)
+print("green")
+regrbl.green()
+sleep(2)
+print("cyan")
+regrbl.cyan()
+sleep(2)
+print("blue")
+regrbl.blue()
+sleep(2)
+print("magenta")
+regrbl.magenta()
+sleep(2)
+print("white")
+regrbl.white()
+sleep(2)
+print("off")
+regrbl.off()
+sleep(2)
+print("rainbow")
+regrbl.rainbow(5)
