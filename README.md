@@ -25,3 +25,14 @@ prints the numbe of breaks a photointerrupter detects every 4 seconds
 makes a 180 servo turn when wires are touched
 ### Requirements
 https://github.com/adafruit/Adafruit_CircuitPython_Motor
+
+## rgbled
+Makes an rgb leds change to various colors
+### Requirements
+[rgb.py](#rgb)
+
+## rgb {#rgb}
+Library for rgb leds. takes three pulseio PWMOut objects. Red, blue, green, Cyan, Yellow, Magenta, White, Off, and a method that fades through all colors.
+
+## hellovscode
+Test code, please ignore
