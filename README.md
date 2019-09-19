@@ -31,7 +31,7 @@ Makes an rgb leds change to various colors
 ### Requirements
 [rgb.py](#rgb)
 
-## rgb {#rgb}
+## rgb
 Library for rgb leds. takes three pulseio PWMOut objects. Red, blue, green, Cyan, Yellow, Magenta, White, Off, and a method that fades through all colors.
 
 ## hellovscode
