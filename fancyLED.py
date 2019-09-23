@@ -36,15 +36,15 @@ class FancyLED:
         count = 0
         while count < 10:
             self.setVal(1,0,0)
-            sleep(0.15)
+            sleep(0.2)
             self.setVal(0,1,0)
-            sleep(0.15)
+            sleep(0.2)
             self.setVal(0,0,1)
-            sleep(0.15)
+            sleep(0.2)
             self.setVal(0,1,0)
-            sleep(0.15)
+            sleep(0.2)
             self.setVal(1,0,0)
-            sleep(0.15)
+            sleep(0.2)
             count += 1
         self.setVal(0,0,0)
 
