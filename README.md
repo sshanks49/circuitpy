@@ -2,27 +2,43 @@
 My CircuitPython assignments
 
 ## distanceSensor
-Changes the onboard metapixel's color based on the distance detected by an HC-SR04 ultrasonic sensor
+> The HC-SR04 measures the distance to an object roughly 10 times per second.
+> The distance is printed out to your serial monitor.
+> The color of the onboard neopixel on your Metro corresponds to the distance, according to the graphic below.
+[[http://wiki.chssigma.com/images/8/8b/Color_spectrum.png]]
+
+### Process
+Read documentation of `adafruit_hcsr04`, got distance sensing working. Then I did some quick math about how to scale the rgb values based on distance, which needed `constrain()`(see [ledFade](#ledFade)) `abs()`, and `int()` to prevent value errors. I later realized that the g and b values were backwards and fixed it
 ### Requirements
 https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/master/adafruit_hcsr04.py
 
 ## helloCircuitPy
-Makes the metapixel red
+> Make the onboard metapixel red
+### Process
+The code was basically provided, making it no big feat.
 
 ## lcdbutton
-prints a number to the lcd which goes up when a button is pressed
+> Set up an LCD that displays a number that increases on button press and switches direction on switch
+### Process
+So the process for this one was: copy stuff from the documentation, be confused as to why it's giving errors for three days, and then updating circuitpy when Dr. Shields figure out that that was the problem. It then proceeded to work. Later I realized that I misinterpretted the assignment and went back to fix it.
 ### Requirements
 https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
 https://github.com/dhalbert/CircuitPython_LCD
 
 ## ledFade
-makes an led fade brighter and dimmer
+> Make an led fade in and out
+### Process
+Some quick googling of how to do analog stuff in circuitpy, and I found that <code>from analogio import AnalogOut</code> allows you to do analog outputs. From there it was only a matter of finding that the max analog value was 65535 in circuitpy instead of the 255 it was in arduino, and a constrain function I copied from stackoverflow, and it worked.
 
 ## photointerupt
-prints the numbe of breaks a photointerrupter detects every 4 seconds
+> Output the number of interrupts a photointerrupter detects over 4 seconds without using `time.sleep()`
+### Process
+The first thing I did was check out the `time` library's documentation. This told me about three different functions that I thought worked like arduino's `millis()`. The first one was deprecated, the second didn't work, and the third wasn't precise enough. When I brought it up to Dr Shields he mentioned `time.monotonic()` which was exactly what I was looking for. I then set up a check for every 4 seconds, like I did with the PID box.
 
 ## servoTouch
-makes a 180 servo turn when wires are touched
+> Make a 180° servo rotate in one direction if one wire is touched and in the other direction if the other is touched.
+### Process
+I looked up the servo library and based my code on the example for the setup, and the fading led for the rotating. I then looked up the touch library and changed when it increments the angle
 ### Requirements
 https://github.com/adafruit/Adafruit_CircuitPython_Motor
 
