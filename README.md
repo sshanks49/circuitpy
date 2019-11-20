@@ -63,5 +63,5 @@ Library for making patterns with three leds, takes the pin number of the leds, w
 
 ## toProcessing
 > Communicate the value of a potentiometer with a processing program
-## Process
-This half was mostly copying from the assignment, but the other half, serial.pde, took some effort. Read about that <ins>here</ins>. 
+### Process
+This half was mostly copying from the assignment, but the other half, serial.pde, took some effort. Read about that [here](https://github.com/sshanks49/circuitpy#toprocessing). 
