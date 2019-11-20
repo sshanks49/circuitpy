@@ -60,3 +60,8 @@ makes patterns on two sets of three leds.
 
 ## fancyLED
 Library for making patterns with three leds, takes the pin number of the leds, which don't need to be initialized or anything. Methods include alternate, which lights up every other led and then every other other led; blink, which turns them all on, and then all off; chase, which chases back and forward for 10 seconds; sparkle, which does random lights for 10 seconds; and setVal, which sets the values manually.
+
+## toProcessing
+> Communicate the value of a potentiometer with a processing program
+## Process
+This half was mostly copying from the assignment, but the other half, serial.pde, took some effort. Read about that <ins>here</ins>. 
