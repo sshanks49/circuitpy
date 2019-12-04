@@ -65,3 +65,8 @@ Library for making patterns with three leds, takes the pin number of the leds, w
 > Communicate the value of a potentiometer with a processing program
 ### Process
 This half was mostly copying from the assignment, but the other half, serial.pde, took some effort. Read about that [here](https://github.com/sshanks49/Processing#serial). 
+
+## fromProcessing
+> Set the angle of two servos from formatted input from [a processing program](https://github.com/sshanks49/Processing#tocircuitpy).
+### Process
+The logic for input parsing was easy enough, the biggest problem was `None` inputs. After adding a simple check, it was no longer a problem.
