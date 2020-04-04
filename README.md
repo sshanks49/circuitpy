@@ -7,7 +7,7 @@ My CircuitPython assignments
 > The distance is printed out to your serial monitor.
 > The color of the onboard neopixel on your Metro corresponds to the distance, according to the graphic below.
 
-!(http://wiki.chssigma.com/images/8/8b/Color_spectrum.png)
+![](http://wiki.chssigma.com/images/8/8b/Color_spectrum.png)
 
 ### Process
 Read documentation of `adafruit_hcsr04`, got distance sensing working. Then I did some quick math about how to scale the rgb values based on distance, which needed `constrain()`(see [ledFade](#ledFade)) `abs()`, and `int()` to prevent value errors. I later realized that the g and b values were backwards and fixed it
