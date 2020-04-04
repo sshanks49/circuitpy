@@ -6,6 +6,7 @@ My CircuitPython assignments
 > The HC-SR04 measures the distance to an object roughly 10 times per second.
 > The distance is printed out to your serial monitor.
 > The color of the onboard neopixel on your Metro corresponds to the distance, according to the graphic below.
+
 !(http://wiki.chssigma.com/images/8/8b/Color_spectrum.png)
 
 ### Process
